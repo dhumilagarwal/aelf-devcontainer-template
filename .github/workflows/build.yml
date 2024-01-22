@@ -12,6 +12,16 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           cacheFrom: ghcr.io/yongenaelf/aelfinity-workshop
-
           push: never
-          runCmd: dotnet build
+          runCmd: |
+            cd src
+            dotnet build
+
+      - name: Run test in dev container
+        uses: devcontainers/ci@v0.3
+        with:
+          cacheFrom: ghcr.io/yongenaelf/aelfinity-workshop
+          push: never
+          runCmd: |
+            cd test
+            dotnet test
