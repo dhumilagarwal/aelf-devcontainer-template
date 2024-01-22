@@ -1,0 +1,12 @@
+/workspaces/aelf-devcontainer-template/src/bin/Debug/net6.0/aelf-devcontainer-template.deps.json
+/workspaces/aelf-devcontainer-template/src/bin/Debug/net6.0/aelf-devcontainer-template.dll
+/workspaces/aelf-devcontainer-template/src/bin/Debug/net6.0/aelf-devcontainer-template.pdb
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/aelf-devcontainer-template.csproj.AssemblyReference.cache
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/aelf-devcontainer-template.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/aelf-devcontainer-template.AssemblyInfoInputs.cache
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/aelf-devcontainer-template.AssemblyInfo.cs
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/aelf-devcontainer-template.csproj.CoreCompileInputs.cache
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/aelf-devcontainer-template.dll
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/refint/aelf-devcontainer-template.dll
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/aelf-devcontainer-template.pdb
+/workspaces/aelf-devcontainer-template/src/obj/Debug/net6.0/ref/aelf-devcontainer-template.dll
