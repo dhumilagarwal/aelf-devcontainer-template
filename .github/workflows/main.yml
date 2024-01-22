@@ -1,4 +1,4 @@
-name: "build"
+name: "main"
 on: push
 
 jobs:
@@ -8,7 +8,7 @@ jobs:
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
 
-      - name: Run build in dev container
+      - name: Run in dev container
         uses: devcontainers/ci@v0.3
         with:
           cacheFrom: ghcr.io/yongenaelf/aelfinity-workshop
@@ -16,12 +16,12 @@ jobs:
           runCmd: |
             cd src
             dotnet build
-
-      - name: Run test in dev container
-        uses: devcontainers/ci@v0.3
-        with:
-          cacheFrom: ghcr.io/yongenaelf/aelfinity-workshop
-          push: never
-          runCmd: |
-            cd test
+            cd ../test
             dotnet test
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dll patched
+          path: |
+            **/*.patched
