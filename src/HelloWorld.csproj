@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>AElf.Contracts.aelf_devcontainer_template</RootNamespace>
+        <RootNamespace>AElf.Contracts.HelloWorld</RootNamespace>
         <IsContract>true</IsContract>
         <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     </PropertyGroup>
