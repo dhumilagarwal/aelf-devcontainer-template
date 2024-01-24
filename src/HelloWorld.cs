@@ -6,6 +6,11 @@ namespace AElf.Contracts.HelloWorld
     // Contract class must inherit the base class generated from the proto file
     public class HelloWorld : HelloWorldContainer.HelloWorldBase
     {
+        // adding this line is for preparing the contract deployment later, 
+        // to differentiate each person's contract. 
+        // This is because our testnet does not allow the deployment of two identical contracts.
+        const string author = "aelf-devcontainer-template-test-1";
+
         // A method that modifies the contract state
         public override Empty Update(StringValue input)
         {
