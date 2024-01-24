@@ -19,9 +19,8 @@ jobs:
             cd ../test
             dotnet test
 
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v4
+      - name: Deploy to testnet
+        uses: yongenaelf/aelf-testnet-deploy-action@v1.1
         with:
-          name: dll patched
-          path: |
-            **/*.patched
+          private-key: ${{ secrets.PRIVATEKEY }}
+          wallet-address: ${{ secrets.WALLET_ADDRESS }}
