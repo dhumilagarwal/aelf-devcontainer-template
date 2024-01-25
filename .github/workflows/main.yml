@@ -1,12 +1,15 @@
 name: "main"
-on: push
+on: 
+  push:
+    paths:
+      - src/**
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (GitHub)
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Run in dev container
         uses: devcontainers/ci@v0.3
@@ -25,8 +28,13 @@ jobs:
         with:
           private-key: ${{ secrets.PRIVATEKEY }}
           wallet-address: ${{ secrets.WALLET_ADDRESS }}
+    outputs:
+      deploymentid: ${{ steps.deploy.outputs.deployment-transaction-id }}
 
+  proposal:
+    runs-on: ubuntu-latest
+    steps:
       - name: Proposal Id
-        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.0.1
+        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.1.0
         with:
-          transaction-id: ${{ steps.deploy.outputs.deployment-transaction-id }}
+          transaction-id: ${{ needs.build.outputs.deploymentid }}
