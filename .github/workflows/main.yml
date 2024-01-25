@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Proposal Id
-        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.1.0
+        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.2.0
         with:
           transaction-id: ${{ needs.build.outputs.deploymentid }}
     needs: build
