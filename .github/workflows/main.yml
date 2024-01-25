@@ -21,6 +21,12 @@ jobs:
 
       - name: Deploy to testnet
         uses: yongenaelf/aelf-testnet-deploy-action@v1.4.2
+        id: deploy
         with:
           private-key: ${{ secrets.PRIVATEKEY }}
           wallet-address: ${{ secrets.WALLET_ADDRESS }}
+
+      - name: Proposal Id
+        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.0.0
+        with:
+          transaction-id: ${{ steps.deploy.outputs.deployment-transaction-id }}
