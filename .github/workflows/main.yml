@@ -27,6 +27,6 @@ jobs:
           wallet-address: ${{ secrets.WALLET_ADDRESS }}
 
       - name: Proposal Id
-        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.0.0
+        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.0.1
         with:
           transaction-id: ${{ steps.deploy.outputs.deployment-transaction-id }}
