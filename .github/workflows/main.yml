@@ -38,3 +38,4 @@ jobs:
         uses: yongenaelf/aelf-deploy-proposal-id-action@v1.1.0
         with:
           transaction-id: ${{ needs.build.outputs.deploymentid }}
+    needs: build
